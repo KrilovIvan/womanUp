@@ -1,0 +1,11 @@
+//main: Todo.less
+.btn(@bgcl) {
+  background-color: @bgcl;
+  & when(lightness(@bgcl) < 60) {
+    color: white;
+  }
+  &:hover {
+    background-color: darken(@bgcl, 10%);
+    cursor: pointer;
+  }
+}

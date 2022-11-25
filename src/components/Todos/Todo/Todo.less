@@ -1,0 +1,76 @@
+//compress:false
+@import "TodoMixins";
+@import "../vars.less";
+
+.todo {
+  font-size: @font-size;
+  font-weight: @font-weight;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  background-color: @bg-color;
+  border-radius: @radius;
+  box-shadow: 5px darken(@bg-color, 20%);
+  padding: 5px;
+}
+.content-contaner {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+.todo-title {
+  font-size: @font-size*1.2;
+}
+.todo-description {
+  width: 600px;
+  word-wrap: break-word;
+  overflow-x: hidden;
+  height: 100%;
+}
+.todo-description,
+.date {
+  color: @descriotion-color;
+}
+
+.btnNdate {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.btnContaner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn {
+  font-size: @font-size;
+  font-weight: @font-weight * 1.5;
+  border-radius: @radius;
+  border: none;
+  text-decoration: none;
+  height: @btn-height;
+  &--delete {
+    .btn(@red-color);
+  }
+  &--edit {
+    .btn(@blue-color);
+  }
+  &--download {
+    .btn(@green-color);
+  }
+}
+
+.checkbox {
+  width: @btn-height;
+  height: @btn-height;
+  border-radius: @radius;
+  cursor: pointer;
+}

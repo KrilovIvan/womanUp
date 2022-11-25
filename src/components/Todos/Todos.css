@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+.inputs {
+  display: grid;
+  grid-template-areas: "err err err" "name date create" "des des file";
+  column-gap: 50px;
+  row-gap: 10px;
+}
+.inName {
+  grid-area: name;
+  height: 30px;
+}
+.inDes {
+  grid-area: des;
+  height: 45px;
+  resize: none;
+}
+.datepicker {
+  grid-area: date;
+}
+.buttonCreate {
+  width: 200px;
+  grid-area: create;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 3px;
+  background-color: #003cff;
+  color: white;
+}
+.buttonCreate:hover {
+  background-color: #0030cc;
+  cursor: pointer;
+}
+.filepicker {
+  grid-area: file;
+  align-self: center;
+}
+.app {
+  background-color: #f5f5f5;
+  height: 100vh;
+  padding: 10px;
+}
+.todosView {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+.errMessage {
+  color: #ff0000;
+  grid-area: err;
+}

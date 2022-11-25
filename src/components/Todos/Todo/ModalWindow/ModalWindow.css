@@ -1,0 +1,79 @@
+.modal {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-window {
+  height: 30vh;
+  width: 40vw;
+  background-color: whitesmoke;
+  border-radius: 1vh;
+  border: 2px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.modal-content {
+  display: grid;
+  grid-template-areas: "title date" "des des" "file file" "save close";
+  gap: 10px;
+}
+.title-modalInput {
+  grid-area: title;
+  height: 30px;
+}
+.description-modalInput {
+  grid-area: des;
+  height: 45px;
+  resize: none;
+}
+.date-modalInput {
+  grid-area: date;
+}
+.btn-modal {
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 3px;
+  border: none;
+  text-decoration: none;
+  height: 30px;
+}
+.btn-modal--save {
+  grid-area: save;
+  background-color: #003cff;
+  color: white;
+}
+.btn-modal--save:hover {
+  background-color: #0030cc;
+  cursor: pointer;
+}
+.btn-modal--close {
+  grid-area: close;
+  background-color: #ff0000;
+  color: white;
+}
+.btn-modal--close:hover {
+  background-color: #cc0000;
+  cursor: pointer;
+}
+.btn-modal--changeFile {
+  background-color: #00ff22;
+  color: white;
+}
+.btn-modal--changeFile:hover {
+  background-color: #00cc1b;
+  cursor: pointer;
+}
+.changeFile {
+  grid-area: file;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
